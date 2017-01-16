@@ -2,6 +2,43 @@
 /* Responsive Breakpoints */
 /* Transitions - Based on Angular Material */
 /* Elevation - Based on Angular Material */
+.md-ink-ripple {
+  pointer-events: none;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-mask-image: radial-gradient(circle, white 100%, black 100%);
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+}
+.md-ripple {
+  position: absolute;
+  background-color: currentColor;
+  border-radius: 50%;
+  opacity: .2;
+  transform: scale(0) translateZ(0);
+  transition: none;
+  will-change: background-color, opacity, transform, width, height, top, left;
+}
+.md-ripple.md-active {
+    animation: ripple 1s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+.md-ripple.md-active.md-fadeout {
+      opacity: 0 !important;
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      transition-duration: .6s;
+}
+@keyframes ripple {
+to {
+    transform: scale(2.2) translateZ(0);
+}
+}
+/* Common */
+/* Responsive Breakpoints */
+/* Transitions - Based on Angular Material */
+/* Elevation - Based on Angular Material */
 .md-avatar {
   width: 40px;
   min-width: 40px;
@@ -191,6 +228,41 @@
 /* Responsive Breakpoints */
 /* Transitions - Based on Angular Material */
 /* Elevation - Based on Angular Material */
+.md-button-toggle {
+  width: auto;
+  display: -ms-flexbox;
+  display: flex;
+}
+.md-button-toggle > .md-button {
+    margin: 0;
+    overflow: hidden;
+    border-width: 1px 0 1px 1px;
+    border-radius: 0;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.md-button-toggle > .md-button:first-child {
+      border-radius: 2px 0 0 2px;
+}
+.md-button-toggle > .md-button:last-child {
+      border-right-width: 1px;
+      border-radius: 0 2px 2px 0;
+}
+.md-button-toggle > .md-button:not([disabled]) {
+      color: rgba(0, 0, 0, 0.54);
+}
+.md-button-toggle > .md-button:not([disabled]):hover:not(.md-toggle):not(.md-raised) {
+        background-color: rgba(153, 153, 153, 0.2);
+        text-decoration: none;
+}
+.md-button-toggle > .md-button .md-ink-ripple {
+      border-radius: 2px;
+}
+/* Common */
+/* Responsive Breakpoints */
+/* Transitions - Based on Angular Material */
+/* Elevation - Based on Angular Material */
 .md-button {
   min-width: 88px;
   min-height: 36px;
@@ -296,7 +368,7 @@
     line-height: 56px;
     background-clip: padding-box;
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-property: background-color, box-shadow, transform;
+    transition-property: background-color, box-shadow, transform;
 }
 .md-button.md-fab:hover, .md-button.md-fab:focus {
       box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 5px 8px rgba(0, 0, 0, 0.14), 0 1px 14px rgba(0, 0, 0, 0.12);
@@ -380,41 +452,6 @@
 }
 .md-button-tooltip.md-tooltip-left {
   margin-left: -8px;
-}
-/* Common */
-/* Responsive Breakpoints */
-/* Transitions - Based on Angular Material */
-/* Elevation - Based on Angular Material */
-.md-button-toggle {
-  width: auto;
-  display: -ms-flexbox;
-  display: flex;
-}
-.md-button-toggle > .md-button {
-    margin: 0;
-    overflow: hidden;
-    border-width: 1px 0 1px 1px;
-    border-radius: 0;
-    text-align: center;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-.md-button-toggle > .md-button:first-child {
-      border-radius: 2px 0 0 2px;
-}
-.md-button-toggle > .md-button:last-child {
-      border-right-width: 1px;
-      border-radius: 0 2px 2px 0;
-}
-.md-button-toggle > .md-button:not([disabled]) {
-      color: rgba(0, 0, 0, 0.54);
-}
-.md-button-toggle > .md-button:not([disabled]):hover:not(.md-toggle):not(.md-raised) {
-        background-color: rgba(153, 153, 153, 0.2);
-        text-decoration: none;
-}
-.md-button-toggle > .md-button .md-ink-ripple {
-      border-radius: 2px;
 }
 /* Common */
 /* Responsive Breakpoints */
@@ -863,43 +900,6 @@
   width: 128px;
   -ms-flex: 1;
       flex: 1;
-}
-/* Common */
-/* Responsive Breakpoints */
-/* Transitions - Based on Angular Material */
-/* Elevation - Based on Angular Material */
-.md-ink-ripple {
-  pointer-events: none;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  -webkit-mask-image: radial-gradient(circle, white 100%, black 100%);
-  transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
-}
-.md-ripple {
-  position: absolute;
-  background-color: currentColor;
-  border-radius: 50%;
-  opacity: .2;
-  transform: scale(0) translateZ(0);
-  transition: none;
-  will-change: background-color, opacity, transform, width, height, top, left;
-}
-.md-ripple.md-active {
-    animation: ripple 1s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
-}
-.md-ripple.md-active.md-fadeout {
-      opacity: 0 !important;
-      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-      transition-duration: .6s;
-}
-@keyframes ripple {
-to {
-    transform: scale(2.2) translateZ(0);
-}
 }
 /* Common */
 /* Responsive Breakpoints */

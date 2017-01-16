@@ -55,7 +55,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(97);
+	module.exports = __webpack_require__(301);
 
 
 /***/ },
@@ -121,7 +121,122 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 97:
+/***/ 94:
+/***/ function(module, exports) {
+
+	module.exports = ".THEME_NAME.md-switch.md-checked .md-switch-container {\n  background-color: ACCENT-COLOR-500-0.5; }\n\n.THEME_NAME.md-switch.md-checked .md-switch-thumb {\n  background-color: ACCENT-COLOR; }\n\n.THEME_NAME.md-switch.md-checked .md-ink-ripple {\n  color: ACCENT-COLOR; }\n\n.THEME_NAME.md-switch.md-checked .md-ripple {\n  opacity: .38; }\n\n.THEME_NAME.md-switch.md-checked.md-primary .md-switch-container {\n  background-color: PRIMARY-COLOR-500-0.5; }\n\n.THEME_NAME.md-switch.md-checked.md-primary .md-switch-thumb {\n  background-color: PRIMARY-COLOR; }\n\n.THEME_NAME.md-switch.md-checked.md-primary .md-ink-ripple {\n  color: PRIMARY-COLOR; }\n\n.THEME_NAME.md-switch.md-checked.md-warn .md-switch-container {\n  background-color: WARN-COLOR-500-0.5; }\n\n.THEME_NAME.md-switch.md-checked.md-warn .md-switch-thumb {\n  background-color: WARN-COLOR; }\n\n.THEME_NAME.md-switch.md-checked.md-warn .md-ink-ripple {\n  color: WARN-COLOR; }\n\n.THEME_NAME.md-switch.md-disabled .md-switch-container, .THEME_NAME.md-switch.md-disabled.md-checked .md-switch-container {\n  background-color: rgba(0, 0, 0, 0.12); }\n\n.THEME_NAME.md-switch.md-disabled .md-switch-thumb, .THEME_NAME.md-switch.md-disabled.md-checked .md-switch-thumb {\n  background-color: #bdbdbd; }\n"
+
+/***/ },
+
+/***/ 129:
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+
+/***/ 181:
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+
+	/* styles */
+	__webpack_require__(129)
+
+	/* script */
+	__vue_exports__ = __webpack_require__(354)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(250)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some((function (key) { return key !== "default" && key !== "__esModule" }))) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "D:\\WorkSpace2017\\html\\vue\\vue-material\\src\\components\\mdSwitch\\mdSwitch.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-ce1f2580", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-ce1f2580", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] mdSwitch.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+
+/***/ 250:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    staticClass: "md-switch",
+	    class: [_vm.themeClass, _vm.classes]
+	  }, [_c('div', {
+	    staticClass: "md-switch-container",
+	    on: {
+	      "click": function($event) {
+	        _vm.toggle($event)
+	      }
+	    }
+	  }, [_c('div', {
+	    staticClass: "md-switch-thumb",
+	    style: (_vm.styles)
+	  }, [_c('input', {
+	    attrs: {
+	      "type": "checkbox",
+	      "name": _vm.name,
+	      "id": _vm.id,
+	      "disabled": _vm.disabled
+	    },
+	    domProps: {
+	      "value": _vm.value
+	    }
+	  }), _vm._v(" "), _c('button', {
+	    staticClass: "md-switch-holder",
+	    attrs: {
+	      "type": _vm.type
+	    }
+	  }), _vm._v(" "), _c('md-ink-ripple', {
+	    attrs: {
+	      "md-disabled": _vm.disabled
+	    }
+	  })], 1)]), _vm._v(" "), (_vm.$slots.default) ? _c('label', {
+	    staticClass: "md-switch-label",
+	    attrs: {
+	      "for": _vm.id || _vm.name
+	    }
+	  }, [_vm._t("default")], 2) : _vm._e()])
+	},staticRenderFns: []}
+	module.exports.render._withStripped = true
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-ce1f2580", module.exports)
+	  }
+	}
+
+/***/ },
+
+/***/ 301:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -131,11 +246,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports.default = install;
 
-	var _mdSwitch = __webpack_require__(296);
+	var _mdSwitch = __webpack_require__(181);
 
 	var _mdSwitch2 = _interopRequireDefault(_mdSwitch);
 
-	var _mdSwitch3 = __webpack_require__(243);
+	var _mdSwitch3 = __webpack_require__(94);
 
 	var _mdSwitch4 = _interopRequireDefault(_mdSwitch3);
 
@@ -150,7 +265,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 150:
+/***/ 354:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -246,121 +361,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	};
 	module.exports = exports['default'];
-
-/***/ },
-
-/***/ 210:
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-
-/***/ 243:
-/***/ function(module, exports) {
-
-	module.exports = ".THEME_NAME.md-switch.md-checked .md-switch-container {\n  background-color: ACCENT-COLOR-500-0.5; }\n\n.THEME_NAME.md-switch.md-checked .md-switch-thumb {\n  background-color: ACCENT-COLOR; }\n\n.THEME_NAME.md-switch.md-checked .md-ink-ripple {\n  color: ACCENT-COLOR; }\n\n.THEME_NAME.md-switch.md-checked .md-ripple {\n  opacity: .38; }\n\n.THEME_NAME.md-switch.md-checked.md-primary .md-switch-container {\n  background-color: PRIMARY-COLOR-500-0.5; }\n\n.THEME_NAME.md-switch.md-checked.md-primary .md-switch-thumb {\n  background-color: PRIMARY-COLOR; }\n\n.THEME_NAME.md-switch.md-checked.md-primary .md-ink-ripple {\n  color: PRIMARY-COLOR; }\n\n.THEME_NAME.md-switch.md-checked.md-warn .md-switch-container {\n  background-color: WARN-COLOR-500-0.5; }\n\n.THEME_NAME.md-switch.md-checked.md-warn .md-switch-thumb {\n  background-color: WARN-COLOR; }\n\n.THEME_NAME.md-switch.md-checked.md-warn .md-ink-ripple {\n  color: WARN-COLOR; }\n\n.THEME_NAME.md-switch.md-disabled .md-switch-container, .THEME_NAME.md-switch.md-disabled.md-checked .md-switch-container {\n  background-color: rgba(0, 0, 0, 0.12); }\n\n.THEME_NAME.md-switch.md-disabled .md-switch-thumb, .THEME_NAME.md-switch.md-disabled.md-checked .md-switch-thumb {\n  background-color: #bdbdbd; }\n"
-
-/***/ },
-
-/***/ 296:
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_exports__, __vue_options__
-	var __vue_styles__ = {}
-
-	/* styles */
-	__webpack_require__(210)
-
-	/* script */
-	__vue_exports__ = __webpack_require__(150)
-
-	/* template */
-	var __vue_template__ = __webpack_require__(352)
-	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-	if (
-	  typeof __vue_exports__.default === "object" ||
-	  typeof __vue_exports__.default === "function"
-	) {
-	if (Object.keys(__vue_exports__).some((function (key) { return key !== "default" && key !== "__esModule" }))) {console.error("named exports are not supported in *.vue files.")}
-	__vue_options__ = __vue_exports__ = __vue_exports__.default
-	}
-	if (typeof __vue_options__ === "function") {
-	  __vue_options__ = __vue_options__.options
-	}
-	__vue_options__.__file = "/Users/marcosmoura/Projects/github/vue-material/src/components/mdSwitch/mdSwitch.vue"
-	__vue_options__.render = __vue_template__.render
-	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-
-	/* hot reload */
-	if (false) {(function () {
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  module.hot.accept()
-	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-7e05ff26", __vue_options__)
-	  } else {
-	    hotAPI.reload("data-v-7e05ff26", __vue_options__)
-	  }
-	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] mdSwitch.vue: functional components are not supported and should be defined in plain js files using render functions.")}
-
-	module.exports = __vue_exports__
-
-
-/***/ },
-
-/***/ 352:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: "md-switch",
-	    class: [_vm.themeClass, _vm.classes]
-	  }, [_c('div', {
-	    staticClass: "md-switch-container",
-	    on: {
-	      "click": function($event) {
-	        _vm.toggle($event)
-	      }
-	    }
-	  }, [_c('div', {
-	    staticClass: "md-switch-thumb",
-	    style: (_vm.styles)
-	  }, [_c('input', {
-	    attrs: {
-	      "type": "checkbox",
-	      "name": _vm.name,
-	      "id": _vm.id,
-	      "disabled": _vm.disabled
-	    },
-	    domProps: {
-	      "value": _vm.value
-	    }
-	  }), _vm._v(" "), _c('button', {
-	    staticClass: "md-switch-holder",
-	    attrs: {
-	      "type": _vm.type
-	    }
-	  }), _vm._v(" "), _c('md-ink-ripple', {
-	    attrs: {
-	      "md-disabled": _vm.disabled
-	    }
-	  })], 1)]), _vm._v(" "), (_vm.$slots.default) ? _c('label', {
-	    staticClass: "md-switch-label",
-	    attrs: {
-	      "for": _vm.id || _vm.name
-	    }
-	  }, [_vm._t("default")], 2) : _vm._e()])
-	},staticRenderFns: []}
-	module.exports.render._withStripped = true
-	if (false) {
-	  module.hot.accept()
-	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-7e05ff26", module.exports)
-	  }
-	}
 
 /***/ }
 

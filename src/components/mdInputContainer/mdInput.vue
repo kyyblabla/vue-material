@@ -9,9 +9,7 @@
     :maxlength="maxlength"
     @focus="onFocus"
     @blur="onBlur"
-    @input="onInput"
-    @keydown.up="onInput"
-    @keydown.down="onInput">
+    @keydown.up="onInput">
 </template>
 
 <script>
