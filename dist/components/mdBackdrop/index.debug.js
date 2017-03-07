@@ -55,92 +55,66 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(277);
+	module.exports = __webpack_require__(69);
 
 
 /***/ },
 
-/***/ 120:
+/***/ 1:
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-
-/***/ 134:
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_exports__, __vue_options__
-	var __vue_styles__ = {}
-
-	/* styles */
-	__webpack_require__(120)
-
-	/* script */
-	__vue_exports__ = __webpack_require__(315)
-
-	/* template */
-	var __vue_template__ = __webpack_require__(229)
-	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-	if (
-	  typeof __vue_exports__.default === "object" ||
-	  typeof __vue_exports__.default === "function"
+	module.exports = function normalizeComponent (
+	  rawScriptExports,
+	  compiledTemplate,
+	  scopeId,
+	  cssModules
 	) {
-	if (Object.keys(__vue_exports__).some((function (key) { return key !== "default" && key !== "__esModule" }))) {console.error("named exports are not supported in *.vue files.")}
-	__vue_options__ = __vue_exports__ = __vue_exports__.default
-	}
-	if (typeof __vue_options__ === "function") {
-	  __vue_options__ = __vue_options__.options
-	}
-	__vue_options__.__file = "D:\\WorkSpace2017\\html\\vue\\vue-material\\src\\components\\mdBackdrop\\mdBackdrop.vue"
-	__vue_options__.render = __vue_template__.render
-	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	  var esModule
+	  var scriptExports = rawScriptExports = rawScriptExports || {}
 
-	/* hot reload */
-	if (false) {(function () {
-	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  module.hot.accept()
-	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-5bb17480", __vue_options__)
-	  } else {
-	    hotAPI.reload("data-v-5bb17480", __vue_options__)
+	  // ES6 modules interop
+	  var type = typeof rawScriptExports.default
+	  if (type === 'object' || type === 'function') {
+	    esModule = rawScriptExports
+	    scriptExports = rawScriptExports.default
 	  }
-	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] mdBackdrop.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
-	module.exports = __vue_exports__
+	  // Vue.extend constructor export interop
+	  var options = typeof scriptExports === 'function'
+	    ? scriptExports.options
+	    : scriptExports
+
+	  // render functions
+	  if (compiledTemplate) {
+	    options.render = compiledTemplate.render
+	    options.staticRenderFns = compiledTemplate.staticRenderFns
+	  }
+
+	  // scopedId
+	  if (scopeId) {
+	    options._scopeId = scopeId
+	  }
+
+	  // inject cssModules
+	  if (cssModules) {
+	    var computed = options.computed || (options.computed = {})
+	    Object.keys(cssModules).forEach((function (key) {
+	      var module = cssModules[key]
+	      computed[key] = function () { return module }
+	    }))
+	  }
+
+	  return {
+	    esModule: esModule,
+	    exports: scriptExports,
+	    options: options
+	  }
+	}
 
 
 /***/ },
 
-/***/ 229:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: "md-backdrop",
-	    on: {
-	      "click": _vm.close,
-	      "keyup": function($event) {
-	        if (_vm._k($event.keyCode, "esc", 27)) { return; }
-	        _vm.close($event)
-	      }
-	    }
-	  })
-	},staticRenderFns: []}
-	module.exports.render._withStripped = true
-	if (false) {
-	  module.hot.accept()
-	  if (module.hot.data) {
-	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-5bb17480", module.exports)
-	  }
-	}
-
-/***/ },
-
-/***/ 277:
+/***/ 69:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -150,7 +124,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports.default = install;
 
-	var _mdBackdrop = __webpack_require__(134);
+	var _mdBackdrop = __webpack_require__(226);
 
 	var _mdBackdrop2 = _interopRequireDefault(_mdBackdrop);
 
@@ -163,7 +137,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 315:
+/***/ 107:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -186,6 +160,77 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	};
 	module.exports = exports['default'];
+
+/***/ },
+
+/***/ 198:
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+
+/***/ 226:
+/***/ function(module, exports, __webpack_require__) {
+
+	
+	/* styles */
+	__webpack_require__(198)
+
+	var Component = __webpack_require__(1)(
+	  /* script */
+	  __webpack_require__(107),
+	  /* template */
+	  __webpack_require__(347),
+	  /* scopeId */
+	  null,
+	  /* cssModules */
+	  null
+	)
+	Component.options.__file = "/Users/kyy/Documents/my/github/vue-material/src/components/mdBackdrop/mdBackdrop.vue"
+	if (Component.esModule && Object.keys(Component.esModule).some((function (key) {return key !== "default" && key !== "__esModule"}))) {console.error("named exports are not supported in *.vue files.")}
+	if (Component.options.functional) {console.error("[vue-loader] mdBackdrop.vue: functional components are not supported with templates, they should use render functions.")}
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-e09d01b8", Component.options)
+	  } else {
+	    hotAPI.reload("data-v-e09d01b8", Component.options)
+	  }
+	})()}
+
+	module.exports = Component.exports
+
+
+/***/ },
+
+/***/ 347:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    staticClass: "md-backdrop",
+	    on: {
+	      "click": _vm.close,
+	      "keyup": function($event) {
+	        if (_vm._k($event.keyCode, "esc", 27)) { return null; }
+	        _vm.close($event)
+	      }
+	    }
+	  })
+	},staticRenderFns: []}
+	module.exports.render._withStripped = true
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-e09d01b8", module.exports)
+	  }
+	}
 
 /***/ }
 

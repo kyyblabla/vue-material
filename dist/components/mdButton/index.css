@@ -107,7 +107,7 @@
     line-height: 56px;
     background-clip: padding-box;
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-property: background-color, box-shadow, transform;
+    transition-property: background-color, box-shadow, transform;
 }
 .md-button.md-fab:hover, .md-button.md-fab:focus {
       box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 5px 8px rgba(0, 0, 0, 0.14), 0 1px 14px rgba(0, 0, 0, 0.12);
